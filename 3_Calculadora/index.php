@@ -35,7 +35,7 @@
 
     if (isset($_GET['valor_1'])) {
         if (empty($_GET['valor_1'])) {
-            echo 'O primeiro valor é obrigatórtio!';
+            echo 'O primeiro valor é obrigatório!';
             exit();
         }
     }
@@ -45,7 +45,7 @@
     
     if (isset($_GET['valor_2'])) {
         if (empty($_GET['valor_2'])) {
-            echo 'O segundo valor é obrigatórtio!';
+            echo 'O segundo valor é obrigatório!';
             exit();
         }
     } 

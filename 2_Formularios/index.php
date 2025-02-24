@@ -31,7 +31,7 @@
 
     if (isset($_GET[`nome`])) {
         if (empty($_GET[`nome`])) {
-            echo `O nome é obrigatórtio!`;
+            echo `O nome é obrigatório!`;
         }
         else {
             echo $_GET[`nome`];
@@ -40,7 +40,7 @@
     
     if (isset($_GET[`poder`])) {
         if (empty($_GET[`poder`])) {
-            echo `O poder é obrigatórtio!`;
+            echo `O poder é obrigatório!`;
         }
         else {
             echo $_GET[`poder`];
