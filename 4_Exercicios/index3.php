@@ -27,19 +27,24 @@
     if (isset($_POST["num"])) {
         if (empty($_POST["num"])) {
             echo "O número é obrigatorio!";
+            exit();
+        }
         }
 
         if ($_POST["num"] > 100) {
             echo "O número é maior que 100";
+            exit();
 
         }
 
         if ($_POST["num"] < 100) {
             echo "O número é menor que 100";
+            exit();
         }
 
         else {
             echo "O número é igual a 100";
+            exit();
         }
 
     ?>

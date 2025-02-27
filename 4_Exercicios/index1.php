@@ -27,19 +27,23 @@
     if (isset($_POST["nota"])) {
         if (empty($_POST["nota"])) {
             echo "A nota é obrigatoria!";
+            exit();
         }
 
         if ($_POST["nota"] < 6) {
             echo "Reprovado";
+            exit();
 
         }
 
         if ($_POST["nota"] >=6 && $_POST["nota"] <= 7) {
             echo "Recuperação";
+            exit();
         }
 
         else {
             echo "Aprovado";
+            exit();
         }
     }
 

@@ -27,17 +27,20 @@
     if (isset($_POST["mes"])) {
         if (empty($_POST["mes"])) {
             echo "O mes é obrigatorio!";
+            exit();
+        }
         }
 
         if ($_POST["mes"] <= 6) {
             echo "Primeiro semestre";
-
+            exit();
         }
 
         else {
             echo "Segundo semestre";
+            exit();
         }
-    }
+    
 
     ?>
     

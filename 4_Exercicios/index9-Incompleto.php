@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXC6</title>
+    <title>EXC9</title>
 </head>
 <body>
 
-    <form action="index6.php" method="post">
+    <form action="index9-Incompleto.php" method="post">;
         <fieldset>
 
-            <legend>Maior valor</legend>
+            <legend>Ordem crescente</legend>
 
             <label for="valor1">Primeiro valor:</label>
             <input type="number" name="valor1" id="valor1" autocomplete="off" placeholder="1, 2, 3..." required>
-
+            
             <br>
 
             <label for="valor2">Segundo valor:</label>
             <input type="number" name="valor2" id="valor2" autocomplete="off" placeholder="1, 2, 3..." required>
+            
+            <br>
 
+            <label for="valor3">Terceiro valor:</label>
+            <input type="number" name="valor3" id="valor3" autocomplete="off" placeholder="1, 2, 3..." required>
+            
             <br>
 
             <input type="submit" value="Enviar valores">
@@ -28,6 +33,7 @@
     </form>
     
     <?php
+
 
     if (isset($_POST["valor1"])) {
         if (empty($_POST["valor1"])) {
@@ -43,20 +49,14 @@
             }
             }
 
-        if ($_POST["valor1"] > $_POST["valor2"]) {
-            echo "O primeiro valor é o maior valor";
-            exit();
-        }
+            if (isset($_POST["valor3"])) {
+                if (empty($_POST["valor3"])) {
+                    echo "O terceiro valor é obrigatorio!";
+                    exit();
+                }
+                }
 
-        if ($_POST["valor1"] < $_POST["valor2"]) {
-            echo "O segundo valor é o maior valor";
-            exit();
-        }
-
-        else {
-            echo "Os valores são iguais";
-            exit();
-        }
+                ## Achar ordem crescente
 
     ?>
     

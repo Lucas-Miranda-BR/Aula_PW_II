@@ -7,13 +7,13 @@
 </head>
 <body>
 
-    <form action="index1.php" method="post">;
+    <form action="index7-Erro-Arrumar.php" method="post">;
         <fieldset>
 
             <legend>Maior de idade</legend>
 
             <label for="idade">Idade:</label>
-            <input type="number" name="idade" id="idade" autocomplete="off" placeholder="0-10" required>
+            <input type="number" name="idade" id="idade" autocomplete="off" placeholder="1, 2, 3..." required>
             
             <br>
 
@@ -24,21 +24,25 @@
     
     <?php
 
+## Refazer, Ano de nascimento - Ano atual = Idade atual
+## Realizar o if/else
 
     if (isset($_POST["idade"])) {
         if (empty($_POST["idade"])) {
             echo "A idade é obrigatoria!";
+            exit();
+        }
         }
 
         if ($_POST["idade"] >= 18) {
             echo "Maior de idade";
-
+            exit();
         }
 
         else {
             echo "Menor de idade";
+            exit();
         }
-    }
 
     ?>
     

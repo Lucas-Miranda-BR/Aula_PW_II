@@ -12,8 +12,8 @@
 
             <legend>Vogal ou consoante</legend>
 
-            <label for="$_POST["nota"]">Letra:</label>
-            <input type="text" name="letra" id="letra" autocomplete="off" placeholder="1 = jan, 2 = fev..." required max="2">
+            <label for="letra">Letra:</label>
+            <input type="text" name="letra" id="letra" autocomplete="off" placeholder="a, b, c..." required max="2">
 
             <br>
 
@@ -26,19 +26,20 @@
 
     if (isset($_POST["letra"])) {
         if (empty($_POST["letra"])) {
-            echo "A letra é obrigatoria!"
+            echo "A letra é obrigatoria!";
+        }
         }
 
-        if ($_POST["letra"] == "a" && $_POST["letra"] == "e" && $_POST["letra"] == "i" && $_POST["letra"] == "o" && $_POST["letra"] == "u") {
-            echo "Vogal"
-
+        if strtolower($_POST["letra"] == "a" || $_POST["letra"] == "e" || $_POST["letra"] == "i" || $_POST["letra"] == "o" || $_POST["letra"] == "u") {
+            echo "Vogal";
+            exit();
         }
 
         else {
-            echo "Consoante"
+            echo "Não vogal, Sendo consoante ou um outro caractere";
+            exit();
         }
-    }
-
+    
     ?>
     
 </body>

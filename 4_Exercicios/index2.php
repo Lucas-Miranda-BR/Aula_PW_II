@@ -27,23 +27,29 @@
     if (isset($_POST["idade"])) {
         if (empty($_POST["idade"])) {
             echo "A idade é obrigatoria!";
+            exit();
+        }
         }
 
         if ($_POST["idade"] >= 60) {
             echo "Opicional";
+            exit();
 
         }
 
         if ($_POST["idade"] >= 18 && $_POST["idade"] < 60) {
-            echo "Obrigatorio"
+            echo "Obrigatorio";
+            exit();
         }
 
         if ($_POST["idade"] >= 16 && $_POST["idade"] < 18) {
             echo "Opicional";
+            exit();
         }
 
         else {
             echo "Não pode votar";
+            exit();
         }
 
     ?>
