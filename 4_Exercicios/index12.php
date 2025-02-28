@@ -13,19 +13,22 @@
             <legend>Calculadora</legend>
 
             <label for="valor1">Primeiro valor:</label>
-            <input type="number" name="valor1" id="valor1" placeholder="Número" required autocomplete="off">
+            <input type="number" name="valor1" id="valor1" placeholder="1, 2, 3..." required autocomplete="off">
 
             <br>
 
             <label for="valor2">Segundo valor:</label>
-            <input type="number" name="valor2" id="valor2" placeholder="Número" required autocomplete="off">
+            <input type="number" name="valor2" id="valor2" placeholder="1, 2, 3..." required autocomplete="off">
 
             <br>
 
-            <input type="submit" name="somar" value="Somar">
-            <input type="submit" name="subtrair" value="Subtrair">
-            <input type="submit" name="multiplicar" value="Multiplicar">
-            <input type="submit" name="dividir" value="Dividir">
+            <label for="op">Operador</label>
+            <input type="text" name="op" id="op" placeholder="somar, subtrair, multiplicar, dividir" required autocomplete="off">
+
+            <br>
+
+            <input type="submit" value="Enviar">
+
         </fieldset>
 
     </form>
@@ -49,20 +52,37 @@
             exit();
         }
     } 
-    else {
+
+    if (isset($_POST['op'])) {
+        if (empty($_POST['op'])) {
+            echo 'O operador é obrigatório!';
+            exit();
+        }
+    } 
+
+    $operador = strtolower($_POST["op"]);
+
+    if ($operador == "somar") {
+        echo $_POST['valor1'] + $_POST['valor2'];
         exit();
     }
-        if (isset($_POST ['somar']))
-            echo $_POST['valor1'] + $_POST['valor2'];
 
-        if (isset($_POST ['subtrair']))
-            echo $_POST['valor1'] - $_POST['valor2'];
+    if ($operador == "subtrair") {
+        echo $_POST['valor1'] - $_POST['valor2'];
+        exit();
+    }
 
-        if (isset($_POST ['multiplicar']))
-            echo $_POST['valor1'] * $_POST['valor2'];
+    
+    if ($operador == "multiplicar") {
+        echo $_POST['valor1'] * $_POST['valor2'];
+        exit();
+    }
 
-        if (isset($_POST ['dividir']))
-            echo $_POST['valor1'] / $_POST['valor2'];
+    
+    if ($operador == "dividir") {
+        echo $_POST['valor1'] / $_POST['valor2'];
+        exit();
+    }
 
     ?>
 

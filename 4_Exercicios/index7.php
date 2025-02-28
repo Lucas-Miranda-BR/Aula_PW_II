@@ -7,34 +7,31 @@
 </head>
 <body>
 
-    <form action="index7-Erro-Arrumar.php" method="post">;
+    <form action="index7.php" method="post">;
         <fieldset>
 
             <legend>Maior de idade</legend>
 
-            <label for="idade">Idade:</label>
-            <input type="number" name="idade" id="idade" autocomplete="off" placeholder="1, 2, 3..." required>
+            <label for="ano_nascimento">Ano que nasceu:</label>
+            <input type="number" name="ano_nascimento" id="ano_nascimento" autocomplete="off" placeholder="1, 2, 3..." required>
             
             <br>
 
-            <input type="submit" value="Enviar idade">
+            <input type="submit" value="Enviar ano de nascimento">
 
         </fieldset>
     </form>
     
     <?php
 
-## Refazer, Ano de nascimento - Ano atual = Idade atual
-## Realizar o if/else
-
-    if (isset($_POST["idade"])) {
-        if (empty($_POST["idade"])) {
-            echo "A idade é obrigatoria!";
+    if (isset($_POST["ano_nascimento"])) {
+        if (empty($_POST["ano_nascimento"])) {
+            echo "O ano que nasceu é obrigatorio!";
             exit();
         }
         }
 
-        if ($_POST["idade"] >= 18) {
+        if (2025 - ($_POST["ano_nascimento"]) >= 18) {
             echo "Maior de idade";
             exit();
         }

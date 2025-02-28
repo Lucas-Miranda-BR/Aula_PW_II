@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index9-Incompleto.php" method="post">;
+    <form action="index9.php" method="post">;
         <fieldset>
 
             <legend>Ordem crescente</legend>
@@ -56,7 +56,24 @@
                 }
                 }
 
-                ## Achar ordem crescente
+                if ($_POST["valor1"] > $_POST["valor2"] && $_POST["valor1"] > $_POST["valor3"]) {
+                    echo "O primeiro valor é o maior!";
+                    exit();
+                }
+
+                if ($_POST["valor2"] > $_POST["valor1"] && $_POST["valor2"] > $_POST["valor3"]) {
+                    echo "O segundo valor é o maior!";
+                    exit();
+                }
+
+                if ($_POST["valor3"] > $_POST["valor1"] && $_POST["valor3"] > $_POST["valor1"]) {
+                    echo "O terceiro valor é o maior!";
+                    exit();
+                }
+
+                else {
+                    echo "Os valores são iguais";
+                }
 
     ?>
     

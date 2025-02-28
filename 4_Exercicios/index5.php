@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXC4</title>
+    <title>EXC5</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
             <legend>Vogal ou consoante</legend>
 
             <label for="letra">Letra:</label>
-            <input type="text" name="letra" id="letra" autocomplete="off" placeholder="a, b, c..." required max="2">
+            <input type="text" name="letra" id="letra" autocomplete="off" placeholder="a, b, c..."  required max="2">
 
             <br>
 
@@ -27,18 +27,20 @@
     if (isset($_POST["letra"])) {
         if (empty($_POST["letra"])) {
             echo "A letra é obrigatoria!";
-        }
-        }
-
-        if strtolower($_POST["letra"] == "a" || $_POST["letra"] == "e" || $_POST["letra"] == "i" || $_POST["letra"] == "o" || $_POST["letra"] == "u") {
-            echo "Vogal";
             exit();
         }
+    }
+    $letra = strtolower($_POST['letra']);
 
-        else {
-            echo "Não vogal, Sendo consoante ou um outro caractere";
-            exit();
-        }
+    if ($letra == "a" || $letra == "e" || $letra == "i" || $letra == "o" || $letra == "u"){
+        echo "Vogal";
+        exit();
+    }
+
+    else {
+        echo "A letra $letra. Não é uma vogal, Sendo consoante ou um outro caractere";
+        exit();
+    }
     
     ?>
     
