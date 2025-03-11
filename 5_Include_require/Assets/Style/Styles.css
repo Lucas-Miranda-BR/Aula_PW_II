@@ -2,3 +2,33 @@
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 25%, rgba(252,70,107,1) 75%);
 }
+.title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 90px;
+}
+.bg-grayscale-30 {
+    background: #a3a3a3;
+}
+
+.bg-grayscale-30 h3,
+.bg-grayscale-30 p {
+    color: #eeeeee;
+}
+
+.bg-grayscale-30 h3{
+    font-size: 48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bg-bluescale-25{
+    background: #9d98d8;
+}
+
+.bg-grayscale-30 p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bg-grayscale-50 {
+background: #5a5a5a;
+}

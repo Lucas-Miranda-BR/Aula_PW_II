@@ -1,5 +1,9 @@
-<?php include 'Header.php'; ?>
+<?php include 'Header.php';?>
 
-<h1>Página de contato</h1>
+<div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h1 class="title">Contato</h1>
+        </div>
+    </div>
 
-<?php include 'Footer.php'; ?>
+<?php include 'Footer.php';?>

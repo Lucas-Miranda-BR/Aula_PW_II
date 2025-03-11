@@ -1,5 +1,9 @@
-<?php include 'Header.php'; ?>
+<?php include 'Header.php';?>
 
-<h1>Brasil</h1>
-
-<?php include 'Footer.php'; ?>
+<div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <h1 class="title">Brasil</h1>
+        </div>
+    </div>
+    
+    <?php include 'Footer.php';?>
