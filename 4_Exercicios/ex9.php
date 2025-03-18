@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index9.php" method="post">;
+    <form action="ex9.php" method="post">
         <fieldset>
 
             <legend>Ordem crescente</legend>

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index10.php" method="post">;
+    <form action="ex10.php" method="post">
         <fieldset>
 
             <legend>Login</legend>

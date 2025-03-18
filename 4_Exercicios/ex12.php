@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index12.php" method="post">
+    <form action="ex12.php" method="post">
 
         <fieldset>
             <legend>Calculadora</legend>

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index3.php" method="post">
+    <form action="ex3.php" method="post">
         <fieldset>
 
             <legend>Número maior que 100</legend>

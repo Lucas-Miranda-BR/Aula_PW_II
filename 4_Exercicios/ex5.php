@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index5.php" method="post">
+    <form action="ex5.php" method="post">
         <fieldset>
 
             <legend>Vogal ou consoante</legend>

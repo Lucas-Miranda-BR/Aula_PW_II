@@ -7,7 +7,7 @@
 </head>
 <body>
     
-<form action="index11.php" method="post">
+<form action="ex11.php" method="post">
 
 <fieldset>
 

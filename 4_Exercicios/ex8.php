@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index8.php" method="post">
+    <form action="ex8.php" method="post">
         <fieldset>
 
             <legend>Bonus</legend>

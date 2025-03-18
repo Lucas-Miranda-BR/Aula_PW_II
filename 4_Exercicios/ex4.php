@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index4.php" method="post">
+    <form action="ex4.php" method="post">
         <fieldset>
 
             <legend>Primeiro ou segundo semestre</legend>

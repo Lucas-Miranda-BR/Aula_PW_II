@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index2.php" method="post">
+    <form action="ex2.php" method="post">
         <fieldset>
 
             <legend>Permisão de voto</legend>

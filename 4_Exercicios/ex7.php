@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index7.php" method="post">;
+    <form action="ex7.php" method="post">
         <fieldset>
 
             <legend>Maior de idade</legend>

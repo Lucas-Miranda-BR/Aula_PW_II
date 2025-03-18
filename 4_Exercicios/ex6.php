@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index6.php" method="post">
+    <form action="ex6.php" method="post">
         <fieldset>
 
             <legend>Maior valor</legend>

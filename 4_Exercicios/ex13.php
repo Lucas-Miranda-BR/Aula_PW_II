@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index13.php" method="post">;
+    <form action="ex13.php" method="post">;
         <fieldset>
 
             <legend>Media de notas e frequencia</legend>

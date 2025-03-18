@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index.php" method="get">
+    <form action="calc.php" method="get">
 
         <fieldset>
             <legend>Calculadora simples</legend>

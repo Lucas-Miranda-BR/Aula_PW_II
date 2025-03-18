@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index1.php" method="post">;
+    <form action="ex1.php" method="post">;
         <fieldset>
 
             <legend>Classificação de notas</legend>

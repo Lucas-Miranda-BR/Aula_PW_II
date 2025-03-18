@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="index.php" method="get">
+    <form action="form.php" method="get">
 
         <fieldset>
             <legend>Informações do Personagem</legend>
