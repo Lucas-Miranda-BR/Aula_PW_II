@@ -31,10 +31,22 @@ $etec = [
     foreach ($etec as $key => $value) {
         echo $value['curso'];
         foreach($value['curso'] as $key => $value) {
-            echo $value['materia_pam'] " ";
-            echo $value['pam_mod1'] " ";
-            echo $value['pam_mod2'] " ";
-            echo "br";
+            echo "<hr> <br>";
+            echo $value['materia_pam'] " <br> ";
+            echo $value['pam_mod1'] " <br> ";
+            echo $value['pam_mod2'] " <br> ";
+            echo "<br>";
+            echo $value['materia_pw'] " <br> ";
+            echo $value['pw_mod'] " <br> ";
+            echo "<br>";
+            echo $value['materia_tpa'] " <br> ";
+            echo "<br>";
+            echo $value['materia_ds_ing'] " <br> ";
+            echo "<hr> <br>";
+            echo $value['materia_rh'] " <br> ";
+            echo $value['materia_gp'] " <br> ";
+            echo $value['materia_ta'] " <br> ";
+            echo $value['materia_adm_ing'] " <br> ";
          }
     }
 
