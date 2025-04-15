@@ -2,68 +2,70 @@
 
 $etec = [
 
-    [
+        [
         "curso" => "Desenvolvimento de Sistemas",
-        $DS = [
+        ],
+
+        $ds = [
         "materiapam" => "Programação de Aplicativos Mobile",
         "materiapw" => "Programação Web",
         "materiatpa" => "Técnicas Avançadas de Programação de Algoritmos",
-        "materiaing" => "Inglês",
+        "materiaingds" => "Inglês",
 
-        "modulopam" => "PAM",
-        "modulopw" => "PW",
-        "moduloing" => "ING"
+        "pammodulo1" => "Modulo I",
+        "pammodulo2" => "Modulo II",
+
+        "pwmodulo1" => "Modulo I",
+        "pwmodulo2" => "Modulo II",
+        "pwmodulo3" => "Modulo III",
+        "pwmodulo4" => "Modulo IV",
+
+        "ingmodulo_ds1" => "Modulo I",
+        "ingmodulo_ds2" => "Modulo II",
+        "ingmodulo_ds3" => "Modulo III"
         ],
 
-        $PAM = [
-            "pammodulo1" => "Modulo I",
-            "pammodulo2" => "Modulo II"
+        [
+        "curso" => "Adminstração"
         ],
 
-        $PW = [
-           "pwmodulo1" => "Modulo I",
-           "pwmodulo2" => "Modulo II",
-           "pwmodulo3" => "Modulo III",
-           "pwmodulo4" => "Modulo IV"
-        ],
-
-        $ING => [
-           "ingmodulo1" => "Modulo I",
-           "ingmodulo2" => "Modulo II",
-           "ingmodulo3" => "Modulo III"
-        ],
-        
-    ],
-
-    [
-        "curso" => "Adminstração",
-        $ADM = [
+        $adm = [
             "materiarh" => "Recursos Humanos",
             "materiagp" => "Gestão de Pessoas",
-            "materiatpa" => "Teoria da Adminstração",
-            "materiaing" => "Inglês",
-            "modulorh" => "RH",
-            "moduloing" => "ING"
-        ],
-        $RH => [
+            "materiatda" => "Teoria da Adminstração",
+            "materiaingadm" => "Inglês",
+
             "rhmodulo1" => "Modulo I",
-            "rhmodulo1" => "Modulo II"
-        ],
-        $ING => [
-                "ingmodulo1" => "Modulo I"
-        ],
-    ],
-];
+            "rhmodulo1" => "Modulo II",
+
+            "ingmodulo_adm1" => "Modulo I"
+        ]
+        ];
 
     foreach ($etec as $key => $value) {
         echo "Curso: " . $value['curso'] . "<br>";
-        foreach ($DS as $key => $value) {
-            echo "Materia PAM: " . $value['materiapam'];
-            echo "Materia PW: " . $value['materiapw'];
-            echo "Materia TPA: " . $value['materiatpa'];
-            echo "Materia ING: " . $value['materiaing'];
+
+        foreach ($ds as $key => $value) {
+            echo "Materia PAM: " . $value['materiapam'] . "Possui 2 modulos. <br>";
+            echo "Materia PW: " . $value['materiapw'] . "Possui 4 modulos. <br>";
+            echo "Materia TPA: " . $value['materiatpa'] . "Não possui modulos. <br>";
+            echo "Materia ING: " . $value['materiaingds'] . "Possui 3 modulos. <br>";
+
+            echo "Modulos de PAM: " . $value['pammodulo1'] . "e" . $value['pammodulo2'] . "<br>";
+            echo "Modulos de PW: " . $value['pwmodulo1'] . "," . $value['pwmodulo2'] . "," . $value['pwmodulo3'] . "e" . $value['pwmodulo4'] . "<br>";                        
+            echo "Modulos de ING: " . $value['ingmodulo_ds1'] . "," . $value['ingmodulo_ds2'] . "e" . $value['ingmodulo_ds3'] . "<br>";                        
+
         }
-            
-        }
+
+        foreach ($adm as $key => $value) {
+            echo "Materia RH: " . $value['materiarh'] . "Possui 2 modulos. <br>";
+            echo "Materia GP: " . $value['materiagp'] . "Não possui modulos. <br>";
+            echo "Materia TdA: " . $value['materiatda'] . "Não possui modulos. <br>";
+            echo "Materia ING: " . $value['materiaingadm'] . "Possui 1 modulo. <br>";
+
+            echo "Modulos de RH: " . $value['rhmodulo1'] . "e" . $value['rhmodulo2'] . "<br>";
+            echo "Modulos de ING: " . $value['ingmodulo_adm1'] . "<br>";
+            }
+    }
 
 ?>
