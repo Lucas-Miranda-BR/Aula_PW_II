@@ -2,13 +2,17 @@
 
 // Configuração da conexão com o BD
 
-$host = 'localhost'; // Se for um servidor não local, inserir o URL inteiro do servidor i.e www.wikipedia.org
+// A localização do ambiente que você esta trabalhando, isso é o URL inteiro do servidor i.e www.wikipedia.org
+$host = 'localhost'; // Utilize-se o "localhost" para ser um servidor local.
 
-$database = 'escola'; // Variavel, baseado em qual tipo de cliente voce esta trabalhando com. i.e Supermercado
+// O tipo do cliente que você esta trabalhando com, ou seja o ambiente desse trabalho. i.e Supermercado
+$database = 'school';
 
-$user = 'root'; // Utilizar "root" caso for um servidor local
+// Utilizar "root" caso for um servidor local
+$user = 'root';
 
-$password = ''; // Caso for necessario, adicionar uma senha
+// Caso for necessario, adicionar uma senha
+$password = '';
 
 /*
     Realizando conexão com o BD a partir
