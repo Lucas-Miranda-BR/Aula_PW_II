@@ -5,13 +5,13 @@ include '../../config/connection.php';
 ?>
 
 <form action="create.php" method="post">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" required>
+    <label for="usernameUser">Username</label>
+    <input type="text" name="usernameUser" id="usernameUser" required autocomplete="off">
 
     <br></br>
 
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" required>
+    <label for="passwordUser">Password</label>
+    <input type="password" name="passwordUser" id="passwordUser" required autocomplete="off">
 
     <br></br>
 
@@ -22,17 +22,17 @@ include '../../config/connection.php';
 
     // Verificação se existe alguma informação dentro dessas variaveis ou não.
 
-    $username = isset($_POST['username']) ? $_POST['username'] : exit();
-    $password = isset($_POST['password']) ? $_POST['password'] : exit();
+    $usernameUser = isset($_POST['usernameUser']) ? $_POST['usernameUser'] : exit();
+    $passwordUser = isset($_POST['passwordUser']) ? $_POST['passwordUser'] : exit();
     
     // Coloca os valores das variaveis dentro da tabela e colunas especificadas
 
-    $stmt = $pdo->prepare('INSERT INTO user (username, password) VALUES (:username, :password)');
+    $stmt = $pdo->prepare('INSERT INTO infoUser (usernameUser, passwordUser) VALUES (:usernameUser, :passwordUser)');
 
     // Ler se as informações digitadas não são maliciosas, ou seja uma limpagem das informações inseridas.
 
-    $stmt->bindParam(':username', $username);
-    $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':usernameUser', $usernameUser);
+    $stmt->bindParam(':passwordUser', $passwordUser);
     $stmt->execute();
 
 ?>

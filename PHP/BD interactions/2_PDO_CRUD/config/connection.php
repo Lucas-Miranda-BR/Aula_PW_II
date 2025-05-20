@@ -6,13 +6,13 @@
 $host = 'localhost'; // Utilize-se o "localhost" para ser um servidor local.
 
 // O tipo do cliente que você esta trabalhando com, ou seja o ambiente desse trabalho. i.e Supermercado
-$database = 'school';
+$database = 'schoolDB';
 
 // Utilizar "root" caso for um servidor local
-$user = 'root';
+$userDB = 'root';
 
 // Caso for necessario, adicionar uma senha
-$password = '';
+$passwordDB = '';
 
 /*
     Realizando conexão com o BD a partir
@@ -20,7 +20,7 @@ $password = '';
 */
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8;", $user, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$database;charset=utf8;", $userDB, $passwordDB);
 
 } catch (PDOException $error) {
     die("Error: " . $error->getMessage());
