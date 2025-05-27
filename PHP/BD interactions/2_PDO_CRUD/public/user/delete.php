@@ -1,17 +1,17 @@
 <?php
     include '../../config/connection.php';
 
-    $id = isset($_GET['id']) ? $_GET['id'] : exit();
+    $idUser = isset($_GET['idUser']) ? $_GET['idUser'] : exit();
 
-    if (empty($id)) {
+    if (empty($idUser)) {
         echo 'É necessário informar o ID.';
         exit();
     }
 
-    $stmt = $pdo -> prepare('DELETE FROM infoUser WHERE id = :id');
-    $stmt -> bindParam(':id', $id);
+    $stmt = $pdo -> prepare('DELETE FROM infouser WHERE idUser = :idUser');
+    $stmt -> bindParam(':idUser', $idUser);
     $stmt -> execute();
 
-    Header("Location: read.php?id=$id");
+    Header("Location: read.php?idUser=$idUser");
 ?>
 
