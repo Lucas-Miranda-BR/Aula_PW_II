@@ -6,7 +6,7 @@ include '../../config/connection.php';
     <legend>Criar anúncios</legend>
 
     <form action="create.php" method="POST">
-        <label for="tituloAnuncio">Tituolo do anúncio</label>
+        <label for="tituloAnuncio">Título do anúncio</label>
         <input type="text" name="tituloAnuncio" id="tituloAnuncio" required autocomplete="off">
 
         <br><br>
@@ -46,12 +46,12 @@ include '../../config/connection.php';
 
         <br><br>
 
-        <label for="nomeProprietario">Nome do proprietario</label>
+        <label for="nomeProprietario">Nome do proprietário</label>
         <input type="text" name="nomeProprietario" id="nomeProprietario" required autocomplete="off">
 
         <br><br>
 
-        <label for="telefoneProprietario">Telefone do proprietario</label>
+        <label for="telefoneProprietario">Telefone do proprietário</label>
         <input type="text" name="telefoneProprietario" id="telefoneProprietario" required autocomplete="off">
 
         <br><br>
