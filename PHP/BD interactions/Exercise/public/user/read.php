@@ -1,5 +1,7 @@
 <?php
     include '../../config/connection.php';
+    include 'userHeader.php';
+    include 'userFooter.php';
 
     $stmt = $pdo->query('SELECT * FROM advertInfo');
     $advertList = $stmt->fetchAll();

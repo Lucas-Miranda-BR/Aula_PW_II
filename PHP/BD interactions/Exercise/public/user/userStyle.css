@@ -1,7 +1,15 @@
 .indie-flower-regular {
     font-family: "Indie Flower", cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
+    font-size: 16px;
+  }
+
+  .indie-flower-title {
+    font-family: "Indie Flower", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36px;
   }
 
   .main-text-color {

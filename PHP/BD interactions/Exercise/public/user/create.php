@@ -1,11 +1,14 @@
 <?php
 include '../../config/connection.php';
+include 'userHeader.php';
+include 'userFooter.php';
 ?>
 
-<fieldset>
-    <legend>Criar anúncios</legend>
+<fieldset class="indie-flower-regular main-text-color main-bg-color">
+<legend class="indie-flower-title content-align-center main-bg-color">Criar anúncios</legend>
 
-    <form action="create.php" method="POST">
+    <div class="row">
+    <form action="create.php" method="POST" class="container-bg-color">
         <label for="tituloAnuncio">Título do anúncio</label>
         <input type="text" name="tituloAnuncio" id="tituloAnuncio" required autocomplete="off">
 
@@ -17,7 +20,7 @@ include '../../config/connection.php';
         <br><br>
 
         <label for="dataPublicacao">Data de publicação</label>
-        <input type="date" name="dataPublicacao" id="dataPublicacao" required autocomplete="off">
+        <input type="date" name="dataPublicacao" id="dataPublicacao" date_timestamp_get required autocomplete="off">
 
         <br><br>
 
@@ -73,7 +76,7 @@ include '../../config/connection.php';
     $nomeProprietario = isset($_POST['nomeProprietario']) ? $_POST['nomeProprietario'] : exit();
     $telefoneProprietario = isset($_POST['telefoneProprietario']) ? $_POST['telefoneProprietario'] : exit();
 
-    $stmt = $pdo -> prepare('INSERT INTO advertInfo (tituloAnuncio, descricaoAnuncio, dataPublicacao, marcaVeiculo, modeloVeiculo, anoVeiculo, corVeiculo, placaVeiculo, nomeProprietario, telefoneProprietario) VALUES (:tituloAnuncio, :descricaoAnuncio, :dataPublicacao, :marcaVeiculo, :modeloVeiculo, :anoVeiculo, :corVeiculo, :placaVeiculo, :nomeProprietario, telefoneProprietario)');
+    $stmt = $pdo->prepare('INSERT INTO advertInfo (tituloAnuncio, descricaoAnuncio, dataPublicacao, marcaVeiculo, modeloVeiculo, anoVeiculo, corVeiculo, placaVeiculo, nomeProprietario, telefoneProprietario) VALUES (:tituloAnuncio, :descricaoAnuncio, :dataPublicacao, :marcaVeiculo, :modeloVeiculo, :anoVeiculo, :corVeiculo, :placaVeiculo, :nomeProprietario, telefoneProprietario)');
 
     $stmt->bindParam(':tituloAnuncio', $tituloAnuncio);
     $stmt->bindParam(':descricaoAnuncio', $descricaoAnuncio);
@@ -86,5 +89,4 @@ include '../../config/connection.php';
     $stmt->bindParam(':nomeProprietario', $nomeProprietario);
     $stmt->bindParam(':telefoneProprietario', $telefoneProprietario);
     $stmt->execute();
-
 ?>

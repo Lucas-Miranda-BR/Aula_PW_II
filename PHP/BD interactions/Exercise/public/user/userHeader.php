@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  <link rel="stylesheet" href="../include/style.css">  
+  <link rel="stylesheet" href="../user/userStyle.css">  
 </head>
   <body>
   <nav class="navbar navbar-expand-lg container-bg-color indie-flower-regular">
@@ -20,13 +20,13 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link main-text-color" aria-current="page" href="../public/index.php">Menu</a>
+          <a class="nav-link main-text-color" aria-current="page" href="../index.php">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link main-text-color" href="../public/user/create.php">Adicionar</a>
+          <a class="nav-link main-text-color" href="../user/create.php">Adicionar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link main-text-color" href="../public/user/read.php">Listagem</a>
+          <a class="nav-link main-text-color" href="../user/read.php">Listagem</a>
         </li>
           </ul>
         </li>

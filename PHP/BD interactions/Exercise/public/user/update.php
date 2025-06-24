@@ -1,5 +1,7 @@
 <?php
     include '../../config/connection.php';
+    include 'userHeader';
+    include 'userFooter';
 
     if($_SERVER['REQUEST_METHOD'] == 'GET') {
         

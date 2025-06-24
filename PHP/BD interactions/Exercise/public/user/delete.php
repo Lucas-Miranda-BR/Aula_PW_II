@@ -1,5 +1,7 @@
 <?php
     include '../../config/connection.php';
+    include 'userHeader.php';
+    include 'userFooter.php';
 
     $advertId = isset($_GET['advertId']) ? $_GET['advertId'] : exit();
 
