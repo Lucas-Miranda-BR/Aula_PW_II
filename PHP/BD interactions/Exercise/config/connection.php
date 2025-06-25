@@ -1,7 +1,7 @@
 <?php
 
 $host = 'localhost';
-$database = 'AdvertDB';
+$database = 'advertdb';
 $userDB = 'root';
 $passwordDB = '';
 

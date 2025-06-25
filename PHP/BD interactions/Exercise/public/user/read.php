@@ -3,7 +3,7 @@
     include 'userHeader.php';
     include 'userFooter.php';
 
-    $stmt = $pdo->query('SELECT * FROM advertInfo');
+    $stmt = $pdo->query('SELECT * FROM advertinfo');
     $advertList = $stmt->fetchAll();
 
     if (isset($_GET['advertId'])) {

@@ -20,7 +20,7 @@ include 'userFooter.php';
         <br><br>
 
         <label for="dataPublicacao">Data de publicação</label>
-        <input type="date" name="dataPublicacao" id="dataPublicacao" date_timestamp_get required autocomplete="off">
+        <input type="date" name="dataPublicacao" id="dataPublicacao" required autocomplete="off">
 
         <br><br>
 
@@ -55,7 +55,7 @@ include 'userFooter.php';
         <br><br>
 
         <label for="telefoneProprietario">Telefone do proprietário</label>
-        <input type="text" name="telefoneProprietario" id="telefoneProprietario" required autocomplete="off">
+        <input type="tel" name="telefoneProprietario" id="telefoneProprietario" required autocomplete="off">
 
         <br><br>
 
@@ -64,19 +64,41 @@ include 'userFooter.php';
 </fieldset>
 
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $tituloAnuncio = $_POST['tituloAnuncio'];
+    $descricaoAnuncio = $_POST['descricaoAnuncio'];
+    $dataPublicacao = $_POST['dataPublicacao'];
+    $marcaVeiculo = $_POST['marcaVeiculo'];
+    $modeloVeiculo = $_POST['modeloVeiculo'];
+    $anoVeiculo = $_POST['anoVeiculo'];
+    $corVeiculo = $_POST['corVeiculo'];
+    $placaVeiculo = $_POST['placaVeiculo'];
+    $nomeProprietario = $_POST['nomeProprietario'];
+    $telefoneProprietario = $_POST['telefoneProprietario'];
 
-    $tituloAnuncio = isset($_POST['tituloAnuncio']) ? $_POST['tituloAnuncio'] : exit();
-    $descricaoAnuncio = isset($_POST['descricaoAnuncio']) ? $_POST['descricaoAnuncio'] : exit();
-    $dataPublicacao = isset($_POST['dataPublicacao']) ? $_POST['dataPublicacao'] : exit();
-    $marcaVeiculo = isset($_POST['marcaVeiculo']) ? $_POST['marcaVeiculo'] : exit();
-    $modeloVeiculo = isset($_POST['modeloVeiculo']) ? $_POST['modeloVeiculo'] : exit();
-    $anoVeiculo = isset($_POST['anoVeiculo']) ? $_POST['anoVeiculo'] : exit();
-    $corVeiculo = isset($_POST['corVeiculo']) ? $_POST['corVeiculo'] : exit();
-    $placaVeiculo = isset($_POST['placaVeiculo']) ? $_POST['placaVeiculo'] : exit();
-    $nomeProprietario = isset($_POST['nomeProprietario']) ? $_POST['nomeProprietario'] : exit();
-    $telefoneProprietario = isset($_POST['telefoneProprietario']) ? $_POST['telefoneProprietario'] : exit();
-
-    $stmt = $pdo->prepare('INSERT INTO advertInfo (tituloAnuncio, descricaoAnuncio, dataPublicacao, marcaVeiculo, modeloVeiculo, anoVeiculo, corVeiculo, placaVeiculo, nomeProprietario, telefoneProprietario) VALUES (:tituloAnuncio, :descricaoAnuncio, :dataPublicacao, :marcaVeiculo, :modeloVeiculo, :anoVeiculo, :corVeiculo, :placaVeiculo, :nomeProprietario, telefoneProprietario)');
+    $stmt = $pdo->prepare('INSERT INTO advertinfo (
+        tituloAnuncio,
+        descricaoAnuncio,
+        dataPublicacao,
+        marcaVeiculo,
+        modeloVeiculo,
+        anoVeiculo,
+        corVeiculo,
+        placaVeiculo,
+        nomeProprietario,
+        telefoneProprietario
+    ) VALUES (
+        :tituloAnuncio,
+        :descricaoAnuncio,
+        :dataPublicacao,
+        :marcaVeiculo,
+        :modeloVeiculo,
+        :anoVeiculo,
+        :corVeiculo,
+        :placaVeiculo,
+        :nomeProprietario,
+        :telefoneProprietario
+    )');
 
     $stmt->bindParam(':tituloAnuncio', $tituloAnuncio);
     $stmt->bindParam(':descricaoAnuncio', $descricaoAnuncio);
@@ -88,5 +110,28 @@ include 'userFooter.php';
     $stmt->bindParam(':placaVeiculo', $placaVeiculo);
     $stmt->bindParam(':nomeProprietario', $nomeProprietario);
     $stmt->bindParam(':telefoneProprietario', $telefoneProprietario);
+    
+    echo "<pre>";
+echo "DEBUG: Checking parameter matching\n";
+echo "SQL expects these parameters:\n";
+print_r([
+    ':tituloAnuncio',
+    ':descricaoAnuncio',
+    ':dataPublicacao',
+    ':marcaVeiculo',
+    ':modeloVeiculo',
+    ':anoVeiculo',
+    ':corVeiculo',
+    ':placaVeiculo',
+    ':nomeProprietario',
+    ':telefoneProprietario'
+]);
+
+echo "\nPOST contains these values:\n";
+print_r(array_keys($_POST));
+echo "</pre>";
+die();
+
     $stmt->execute();
+}
 ?>

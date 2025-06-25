@@ -10,7 +10,7 @@
         exit();
     }
 
-    $stmt = $pdo -> prepare('DELETE FROM advertInfo WHERE advertId = :advertId');
+    $stmt = $pdo -> prepare('DELETE FROM advertinfo WHERE advertId = :advertId');
     $stmt -> bindParam(':advertId', $advertId);
     $stmt -> execute();
 

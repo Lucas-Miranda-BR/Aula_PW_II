@@ -72,7 +72,7 @@
             exit();
         }
 
-        $stmt = $pdo -> prepare('SELECT * FROM advertInfo WHERE advertId=:advertId');
+        $stmt = $pdo -> prepare('SELECT * FROM advertinfo WHERE advertId=:advertId');
         $stmt -> bindParam(':advertId', $advertId);
         $stmt -> execute();
         $advertInfoFetch = $stmt -> fetchAll();
