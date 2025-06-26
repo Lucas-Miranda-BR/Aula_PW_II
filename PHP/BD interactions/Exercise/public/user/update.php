@@ -1,7 +1,7 @@
 <?php
     include '../../config/connection.php';
-    include 'userHeader';
-    include 'userFooter';
+    include 'userHeader.php';
+    include 'userFooter.php';
 
     if($_SERVER['REQUEST_METHOD'] == 'GET') {
         
@@ -172,7 +172,7 @@
 <fieldset>
     <legend>Editar anúncio</legend>
 
-    <form action="create.php" method="POST">
+    <form action="update.php" method="POST">
 
         <input type="hidden" name="advertId" value="<?php echo $advertInfoFetch[0]["advertId"]; ?>">
 

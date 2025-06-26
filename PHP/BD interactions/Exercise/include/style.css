@@ -1,25 +1,45 @@
 .indie-flower-regular {
     font-family: "Indie Flower", cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
+    font-size: 16px;
+  }
+
+  .indie-flower-title {
+    font-family: "Indie Flower", cursive;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 36px;
   }
 
   .main-text-color {
-    color: #474158;
+    color: #36403C;
   }
 
   .main-bg-color {
-    background-color: #BDB1A3;
+    background-color: #BFBFBF;
   }
 
   .container-bg-color {
-    background-color: #F5E9DF;
+    background-color: #8C8C8C;
   }
 
-  .confirm-text-color {
-    color: #A77E56;
+  .btn-confirm-color {
+    color: #03178C;
+    background-color: #F2F2F2;
   }
 
-  .cancel-text-color {
-    color: #C27446;
+  .btn-confirm-color:hover {
+    color: #F2F2F2;
+    background-color: #03178C;
+  }
+
+  .btn-cancel-color {
+    color: #D90B1C;
+    background-color: #F2F2F2;
+  }
+
+  .btn-confirm-color:hover {
+    color: #F2F2F2;
+    background-color: #D90B1C;
   }

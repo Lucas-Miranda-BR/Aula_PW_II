@@ -13,21 +13,23 @@
   }
 
   .main-text-color {
-    color: #474158;
+    color: #36403C;
   }
 
   .main-bg-color {
-    background-color: #BDB1A3;
+    background-color: #BFBFBF;
   }
 
   .container-bg-color {
-    background-color: #F5E9DF;
+    background-color: #8C8C8C;
   }
 
-  .confirm-text-color {
-    color: #A77E56;
+  .btn-main-color {
+    color: #0D0D0D;
+    background-color: #F2F2F2;
   }
 
-  .cancel-text-color {
-    color: #C27446;
+  .btn-main-color:hover {
+    color: #F2F2F2;
+    background-color: #0D0D0D;
   }
