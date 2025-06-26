@@ -13,7 +13,7 @@
   }
 
   .main-text-color {
-    color: #36403C;
+    color: #FFD532;
   }
 
   .main-bg-color {
@@ -24,12 +24,22 @@
     background-color: #8C8C8C;
   }
 
-  .btn-main-color {
-    color: #0D0D0D;
+.btn-confirm-color {
+    color: #F2F2F2;
+    background-color: #03178C;
+  }
+
+  .btn-confirm-color:hover {
+    color: #03178C;
     background-color: #F2F2F2;
   }
 
-  .btn-main-color:hover {
+  .btn-cancel-color {
     color: #F2F2F2;
-    background-color: #0D0D0D;
+    background-color: #D90B1C;
+  }
+
+  .btn-cancel-color:hover {
+    color: #D90B1C;
+    background-color: #F2F2F2;
   }

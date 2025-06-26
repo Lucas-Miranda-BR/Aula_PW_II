@@ -13,14 +13,14 @@
   <body>
   <nav class="navbar navbar-expand-lg container-bg-color indie-flower-regular">
   <div class="container-fluid">
-    <a class="navbar-brand main-text-color" href="#">CRUD</a>
+    <a class="navbar-brand main-text-color" href="#">AdPWII</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link main-text-color" aria-current="page" href="../public/index.php">Menu</a>
+          <a class="nav-link main-text-color" aria-current="page" href="../public/index.php">Início</a>
         </li>
         <li class="nav-item">
           <a class="nav-link main-text-color" href="../public/user/create.php">Adicionar</a>

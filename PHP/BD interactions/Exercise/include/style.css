@@ -13,7 +13,7 @@
   }
 
   .main-text-color {
-    color: #36403C;
+    color: #FFD532;
   }
 
   .main-bg-color {
@@ -24,22 +24,22 @@
     background-color: #8C8C8C;
   }
 
-  .btn-confirm-color {
-    color: #03178C;
-    background-color: #F2F2F2;
-  }
-
-  .btn-confirm-color:hover {
+.btn-confirm-color {
     color: #F2F2F2;
     background-color: #03178C;
   }
 
-  .btn-cancel-color {
-    color: #D90B1C;
+  .btn-confirm-color:hover {
+    color: #03178C;
     background-color: #F2F2F2;
   }
 
-  .btn-confirm-color:hover {
+  .btn-cancel-color {
     color: #F2F2F2;
     background-color: #D90B1C;
+  }
+
+  .btn-cancel-color:hover {
+    color: #D90B1C;
+    background-color: #F2F2F2;
   }

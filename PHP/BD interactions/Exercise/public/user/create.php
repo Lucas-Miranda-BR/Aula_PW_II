@@ -6,7 +6,7 @@ include 'userFooter.php';
 
 <div class="container mt-5 mb-5">
     <fieldset class="border p-4 rounded indie-flower-regular main-text-color main-bg-color">
-        <legend class="border-0 indie-flower-title text-center main-bg-color w-auto px-3">Criar anúncios</legend>
+        <h1 class="border-0 indie-flower-title text-center main-bg-color w-auto px-3">Criar anúncios</h1>
 
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
@@ -71,16 +71,16 @@ include 'userFooter.php';
 </div>
 
 <?php
-    $tituloAnuncio = $_POST['tituloAnuncio'];
-    $descricaoAnuncio = $_POST['descricaoAnuncio'];
-    $dataPublicacao = $_POST['dataPublicacao'];
-    $marcaVeiculo = $_POST['marcaVeiculo'];
-    $modeloVeiculo = $_POST['modeloVeiculo'];
-    $anoVeiculo = $_POST['anoVeiculo'];
-    $corVeiculo = $_POST['corVeiculo'];
-    $placaVeiculo = $_POST['placaVeiculo'];
-    $nomeProprietario = $_POST['nomeProprietario'];
-    $telefoneProprietario = $_POST['telefoneProprietario'];
+    $tituloAnuncio = isset($_POST['tituloAnuncio']) ? $_POST['tituloAnuncio'] : exit();
+    $descricaoAnuncio = isset($_POST['descricaoAnuncio']) ? $_POST['descricaoAnuncio'] : exit();
+    $dataPublicacao = isset($_POST['dataPublicacao']) ? $_POST['dataPublicacao'] : exit();
+    $marcaVeiculo = isset($_POST['marcaVeiculo']) ? $_POST['marcaVeiculo'] : exit();
+    $modeloVeiculo = isset($_POST['modeloVeiculo']) ? $_POST['modeloVeiculo'] : exit();
+    $anoVeiculo = isset($_POST['anoVeiculo']) ? $_POST['anoVeiculo'] : exit();
+    $corVeiculo = isset($_POST['corVeiculo']) ? $_POST['corVeiculo'] : exit();
+    $placaVeiculo = isset($_POST['placaVeiculo']) ? $_POST['placaVeiculo'] : exit();
+    $nomeProprietario = isset($_POST['nomeProprietario']) ? $_POST['nomeProprietario'] : exit();
+    $telefoneProprietario = isset($_POST['telefoneProprietario']) ? $_POST['telefoneProprietario'] : exit();
 
     $stmt = $pdo->prepare('INSERT INTO advertinfo (
         tituloAnuncio,

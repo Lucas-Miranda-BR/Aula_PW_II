@@ -53,7 +53,7 @@
             
             <div class="card-footer text-center">
                 <a href="http://localhost/pw_ii/PHP/BD%20interactions/Exercise/public/user/update.php?advertId=<?php echo $advert['advertId']; ?>" class="btn btn-confirm-color">Editar</a>
-                <a href="http://localhost/pw_ii/PHP/BD%20interactions/Exercise/public/user/delete.php?advertId=<?php echo $advert['advertId']; ?>" class="btn btn-confirm-color">Deletar</a>
+                <a href="http://localhost/pw_ii/PHP/BD%20interactions/Exercise/public/user/delete.php?advertId=<?php echo $advert['advertId']; ?>" class="btn btn-cancel-color">Deletar</a>
             </div>
         </div>
     <?php } ?>
