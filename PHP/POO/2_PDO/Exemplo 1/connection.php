@@ -3,7 +3,7 @@
 $dbHost = 'localhost';
 $dbPassword = '';
 $dbUsername = 'root';
-$dbName = 'dbebook';
+$dbName = 'sistema_ebooks';
 
 try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8;", $dbUsername, $dbPassword);

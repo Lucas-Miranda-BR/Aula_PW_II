@@ -1,34 +1,54 @@
 <?php 
 
 class Ebook(){
-    private $ebookId;
-    private $ebookTitle;
-    private $ebookDescription;
-    private $ebookIsbn;
-    private $ebookPublishDate;
-    private $ebookPrice;
-    private $ebookLanguage;
-    private $ebookPhoto;
+    private $id;
+    private $titulo;
+    private $descricao;
+    private $isbn;
+    private $data_publicacao;
+    private $preco;
+    private $idioma;
+    private $foto;
 
-    public function __construct($ebookTitle, $ebookDescription, $ebookIsbn, $ebookPublishDate, $ebookPrice, $ebookLanguage, $ebookPhoto){
-        $this -> ebookTitle = $ebookTitle;
-        $this -> ebookDescription = $ebookDescription;
-        $this -> ebookIsbn = $ebookIsbn;
-        $this -> ebookPublishDate = $ebookPublishDate;
-        $this -> ebookPrice = $ebookPrice;
-        $this -> ebookLanguage = $ebookLanguage;
-        $this -> ebookPhoto = $ebookPhoto;
+    public function __construct($titulo, $descricao, $isbn, $data_publicacao, $preco, $idioma, $foto){
+        $this -> titulo = $titulo;
+        $this -> descricao = $descricao;
+        $this -> isbn = $isbn;
+        $this -> data_publicacao = $data_publicacao;
+        $this -> preco = $preco;
+        $this -> idioma = $idioma;
+        $this -> foto = $foto;
     }
 
-public function ebookRegister(){}
+public function insert($titulo, $descricao, $isbn, $data_publicacao, $preco, $idioma, $foto){
+	    $stmt = $pdo->prepare("INSERT INTO ebook (titulo, descricao, isbn, data_publicacao, preco, idioma, foto) VALUES (:titulo, :descricao, :isbn, :data_publicacao, :preco, :idioma, :foto)");
+	    $stmt->bindParam(':titulo', $titulo);
+	    $stmt->bindParam(':descricao', $descricao);
+	    $stmt->bindParam(':isbn', $isbn);
+	    $stmt->bindParam(':data_publicacao', $data_publicacao);
+	    $stmt->bindParam(':preco', $preco);
+	    $stmt->bindParam(':idioma', $idioma);
+	    $stmt->bindParam(':foto', $foto);
+	    $stmt->execute();
+}
 
-public function ebookSearch($ebookId){}
+public function select($id){
+    $stmt = $pdo->query("SELECT * FROM ebook WHERE id=$id");
+	$ebook = $stmt->fetchAll();
+}
 
-public function ebookSearchAll(){}
+public function selectAll(){
+    $stmt = $pdo->query("SELECT * FROM ebook");
+	$ebook = $stmt->fetchAll();
+}
 
-public function ebookUpdate($ebookId){}
+public function update($id){}
 
-public function ebookDelete(){}
+public function delete(){
+    $stmt = $pdo->prepare('DELETE FROM ebook WHERE id = :id');
+    $stmt -> (':id', id);
+    $stmt -> execute();
+}
 
 }
 
