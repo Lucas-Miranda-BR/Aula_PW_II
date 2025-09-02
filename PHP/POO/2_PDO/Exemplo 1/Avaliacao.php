@@ -1,6 +1,6 @@
 <?php 
 
-class Avaliacao(){
+class Avaliacao{
     private $id;
     private $comentario;
     private $nota;
@@ -30,13 +30,21 @@ public function selectAll(){
 	$avaliacao = $stmt->fetchAll();
 }
 
-public function update($id){}
+public function update($id, $nota, $comentario, $data){
+    $stmt = $pdo->prepare("UPDATE usuario SET nota = :nota, comentario = :comentario, data = :data WHERE id = :id");
+    $stmt->bindParam(':nota', $nota);
+    $stmt->bindParam(':comentario', $comentario);
+    $stmt->bindParam(':data', $data);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 
-public function delete(){
+public function delete($id){
     $stmt = $pdo->prepare('DELETE FROM avaliacao WHERE id = :id');
-    $stmt -> (':id', id);
+    $stmt -> bindParam(':id', $id);
     $stmt -> execute();
 
+}
 }
 
 ?>

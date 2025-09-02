@@ -1,6 +1,6 @@
 <?php 
 
-class Ebook(){
+class Ebook {
     private $id;
     private $titulo;
     private $descricao;
@@ -42,11 +42,22 @@ public function selectAll(){
 	$ebook = $stmt->fetchAll();
 }
 
-public function update($id){}
+public function update($id, $titulo, $descricao, $data_publicacao, $isbn, $preco, $idioma, $foto){
+    $stmt = $pdo->prepare("UPDATE usuario SET titulo = :titulo, descricao = :descricao, data_publicacao = :data_publicacao, isbn = :isbn, preco = :preco, idioma = :idioma, foto = :foto WHERE id = :id");
+    $stmt->bindParam(':titulo', $titulo);
+    $stmt->bindParam(':descricao', $descricao);
+    $stmt->bindParam(':data_publicacao', $data_publicacao);
+    $stmt->bindParam(':isbn', $isbn);
+    $stmt->bindParam(':preco', $preco);
+    $stmt->bindParam(':idioma', $idioma);
+    $stmt->bindParam(':foto', $idioma);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 
-public function delete(){
+public function delete($id){
     $stmt = $pdo->prepare('DELETE FROM ebook WHERE id = :id');
-    $stmt -> (':id', id);
+    $stmt -> bindParam(':id', $id);
     $stmt -> execute();
 }
 

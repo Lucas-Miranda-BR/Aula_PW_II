@@ -1,6 +1,6 @@
 <?php 
 
-class Categoria(){
+class Categoria {
     private $id;
     private $nome;
 
@@ -24,11 +24,16 @@ public function selectAll(){
 	$categoria = $stmt->fetchAll();
 }
 
-public function update($id){}
+public function update($id, $nome){
+    $stmt = $pdo->prepare("UPDATE usuario SET nome = :nome WHERE id = :id");
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 
-public function delete(){
+public function delete($id){
     $stmt = $pdo->prepare('DELETE FROM categoria WHERE id = :id');
-    $stmt -> (':id', id);
+    $stmt -> bindParam(':id', $id);
     $stmt -> execute();
 }
 

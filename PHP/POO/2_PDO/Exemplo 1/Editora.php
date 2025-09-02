@@ -1,6 +1,6 @@
 <?php 
 
-class Editora(){
+class Editora {
     private $id;
     private $nome;
     private $email;
@@ -30,11 +30,18 @@ public function selectAll(){
 	$editora = $stmt->fetchAll();
 }
 
-public function update($id){}
+public function update($id, $nome, $email, $site){
+    $stmt = $pdo->prepare("UPDATE usuario SET nome = :nome, email = :email, site = :site WHERE id = :id");
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':site', $site);
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+}
 
-public function delete(){
+public function delete($id){
     $stmt = $pdo->prepare('DELETE FROM editora WHERE id = :id');
-    $stmt -> (':id', id);
+    $stmt -> bindParam(':id', $id);
     $stmt -> execute();
 }
 

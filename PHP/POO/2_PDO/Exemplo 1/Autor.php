@@ -1,6 +1,6 @@
 <?php 
 
-class Autor(){
+class Autor{
     private $id;
     private $nome;
     private $bibliografia;
@@ -30,16 +30,21 @@ public function selectAll(){
 	$autor = $stmt->fetchAll();
 }
 
-public function update($id){
+public function update($id, $nome, $biografia, $foto){
+    $stmt = $pdo->prepare("UPDATE usuario SET nome = :nome, biografia = :biografia, foto = :foto WHERE id = :id");
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':biografia', $biografia);
+    $stmt->bindParam(':foto', $foto);
+    $stmt->bindParam(':id', $id);
 
+    $stmt->execute();
 }
 
-public function delete(){
+public function delete($id){
     $stmt = $pdo->prepare('DELETE FROM autor WHERE id = :id');
-    $stmt -> (':id', id);
+    $stmt -> bindParam(':id', $id);
     $stmt -> execute();
 }
-
 }
 
 ?>
